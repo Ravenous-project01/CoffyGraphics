@@ -35,15 +35,32 @@ Coffy graphics é um projeto de ide java pra desenvolvimento de apps em projeto 
 
 ---
 
-## 🚀 Como Executar
+## 🚀 Como Instalar e Executar
+
+> ⚠️ **Nota de Compatibilidade:** Os scripts de instalação e inicialização automática fornecidos operam **exclusivamente no Windows**[cite: 4, 5]. O suporte nativo para distribuições **Linux** está em planejamento para futuras atualizações.
+
+---
 
 ### Pré-requisitos
-- **JDK 17** ou superior instalado e configurado no `PATH`.
-- **Apache Maven** instalado.
+- **JDK 17** ou superior instalado e configurado nas Variáveis de Ambiente (`PATH`).
+- **Apache Maven** instalado e configurado no `PATH`.
+- **PowerShell 5.1+** (padrão no Windows 10/11).
 
-### Passo a Passo
+---
 
-1. **Clone o repositório:**
-   ```bash
-   git clone [https://github.com/seu-usuario/CoffyGraphics.git](https://github.com/seu-usuario/CoffyGraphics.git)
-   cd CoffyGraphics
+### Métodos de Instalação (Windows)
+
+#### Opção 1: Via Script Lançador Batch (`INSTALAR.bat`) — *Recomendado*
+
+1. Baixe os arquivos do instalador e certifique-se de que o `Instalar.ps1` e o `INSTALAR.bat` estejam na **mesma pasta**[cite: 4, 5].
+2. Dê um **duplo clique** sobre o arquivo **`INSTALAR.bat`**[cite: 4].
+3. O script executará o PowerShell em segundo plano (`-ExecutionPolicy Bypass`) para construir a estrutura do projeto em `%USERPROFILE%\CoffyGraphics` e criar um atalho na Área de Trabalho[cite: 4, 5].
+
+---
+
+#### Opção 2: Via Terminal PowerShell (`Instalar.ps1`)
+
+1. Abra o **PowerShell** no diretório onde os scripts foram baixados.
+2. Execute o comando abaixo:
+   ```powershell
+   powershell -NoProfile -ExecutionPolicy Bypass -File "Instalar.ps1"
